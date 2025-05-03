@@ -1,202 +1,255 @@
 
 import { Button } from "@/components/ui/button";
-import { Avatar } from "@/components/ui/avatar";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
+import { Badge } from "@/components/ui/badge";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Верхний герой-раздел */}
-      <section className="relative bg-gradient-to-r from-violet-100 to-indigo-100 py-20">
-        <div className="container mx-auto px-4 md:px-6">
+      {/* Герой-секция */}
+      <section className="relative bg-gradient-to-r from-blue-900 to-cyan-800 text-white py-24">
+        <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center"></div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-            <div className="flex-1 space-y-4">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900">Иван Петров</h1>
-              <h2 className="text-xl md:text-2xl text-gray-700">Писатель, исследователь, путешественник</h2>
-              <p className="text-gray-600 max-w-lg">
-                Исследователь жизни и автор книг о саморазвитии и путешествиях. Более 15 лет опыта в изучении культур разных стран.
+            <div className="flex-1 space-y-6 text-center md:text-left">
+              <Badge className="bg-cyan-500 text-white hover:bg-cyan-600">Инновационная защита</Badge>
+              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+                SafeNet <span className="text-cyan-400">защитит</span> ваши данные в цифровом мире
+              </h1>
+              <p className="text-xl md:text-2xl text-blue-100 max-w-xl">
+                Революционная система кибербезопасности для бизнеса и частных лиц
               </p>
-              <div className="flex gap-3">
-                <Button>Связаться</Button>
-                <Button variant="outline">Узнать больше</Button>
+              <div className="flex gap-4 flex-wrap justify-center md:justify-start">
+                <Button size="lg" className="bg-cyan-500 hover:bg-cyan-600">Запросить демо</Button>
+                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
+                  Узнать больше
+                </Button>
               </div>
             </div>
             <div className="flex-shrink-0">
-              <Avatar className="h-40 w-40 md:h-64 md:w-64 border-4 border-white shadow-lg">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=512&h=512&q=80" alt="Иван Петров" />
-              </Avatar>
+              <img 
+                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                alt="SafeNet Security" 
+                className="rounded-lg shadow-2xl w-full max-w-md"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Раздел "Обо мне" */}
-      <section className="py-16" id="about">
+      {/* Секция преимуществ */}
+      <section className="py-20">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="mb-10 text-center">
-            <h2 className="text-3xl font-bold mb-2">Обо мне</h2>
-            <p className="text-gray-600">Немного о моем пути и жизненной философии</p>
-            <Separator className="mt-4 mx-auto w-20 bg-violet-400" />
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Почему выбирают SafeNet</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Наша инновационная платформа обеспечивает надежную защиту от всех видов киберугроз
+            </p>
+            <Separator className="mt-8 mx-auto w-20 bg-cyan-500" />
           </div>
           
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div className="space-y-4">
-              <p className="text-gray-600">
-                Родился в 1985 году в Санкт-Петербурге. С детства проявлял интерес к литературе и путешествиям. Окончил филологический факультет СПбГУ, после чего начал карьеру журналиста.
-              </p>
-              <p className="text-gray-600">
-                За последние 15 лет посетил более 40 стран, написал 5 книг о саморазвитии и путешествиях, которые были переведены на несколько языков.
-              </p>
-              <p className="text-gray-600">
-                Моя философия заключается в постоянном обучении и обмене опытом с людьми из разных культур.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-lg overflow-hidden aspect-square">
-                <img src="https://images.unsplash.com/photo-1501555088652-021faa106b9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Путешествие" className="w-full h-full object-cover" />
-              </div>
-              <div className="rounded-lg overflow-hidden aspect-square">
-                <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="За работой" className="w-full h-full object-cover" />
-              </div>
-              <div className="rounded-lg overflow-hidden col-span-2 aspect-video">
-                <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Писательство" className="w-full h-full object-cover" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Раздел достижений */}
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="mb-10 text-center">
-            <h2 className="text-3xl font-bold mb-2">Достижения</h2>
-            <p className="text-gray-600">Ключевые моменты моей карьеры</p>
-            <Separator className="mt-4 mx-auto w-20 bg-violet-400" />
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-violet-100 p-3 rounded-full">
-                  <Icon name="BookOpen" className="h-6 w-6 text-violet-600" />
-                </div>
-                <h3 className="text-xl font-semibold">5 книг</h3>
-              </div>
-              <p className="text-gray-600">Автор пяти бестселлеров о саморазвитии и путешествиях, переведенных на 7 языков</p>
-            </Card>
-            
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-violet-100 p-3 rounded-full">
-                  <Icon name="Globe" className="h-6 w-6 text-violet-600" />
-                </div>
-                <h3 className="text-xl font-semibold">40+ стран</h3>
-              </div>
-              <p className="text-gray-600">Посетил более 40 стран на 5 континентах, изучая различные культуры и традиции</p>
-            </Card>
-            
-            <Card className="p-6 hover:shadow-lg transition-shadow">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="bg-violet-100 p-3 rounded-full">
-                  <Icon name="Award" className="h-6 w-6 text-violet-600" />
-                </div>
-                <h3 className="text-xl font-semibold">7 наград</h3>
-              </div>
-              <p className="text-gray-600">Получил 7 литературных премий за вклад в развитие жанра путевых заметок</p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Раздел "Хронология" */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="mb-10 text-center">
-            <h2 className="text-3xl font-bold mb-2">Хронология</h2>
-            <p className="text-gray-600">Ключевые этапы моего пути</p>
-            <Separator className="mt-4 mx-auto w-20 bg-violet-400" />
-          </div>
-          
-          <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
+          <div className="grid md:grid-cols-3 gap-8">
             {[
-              { year: "2007", title: "Окончание университета", desc: "Получил степень по филологии в СПбГУ" },
-              { year: "2010", title: "Первая книга", desc: "Выпустил свою первую книгу «Путешествие внутрь себя»" },
-              { year: "2013", title: "Кругосветное путешествие", desc: "Совершил годовое кругосветное путешествие через 20 стран" },
-              { year: "2016", title: "Литературная премия", desc: "Получил первую международную литературную премию" },
-              { year: "2020", title: "Фонд поддержки путешественников", desc: "Основал благотворительный фонд поддержки начинающих путешественников" }
-            ].map((item, index) => (
-              <div key={index} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-violet-500 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                  {item.year.substr(2)}
-                </div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-4 rounded shadow">
-                  <div className="flex items-center justify-between space-x-2 mb-1">
-                    <h4 className="font-bold text-gray-900">{item.title}</h4>
-                    <Badge variant="outline">{item.year}</Badge>
+              {
+                icon: "Shield",
+                title: "Максимальная защита",
+                desc: "Многоуровневая система шифрования и защиты от всех типов кибератак"
+              },
+              {
+                icon: "Zap",
+                title: "Молниеносная скорость",
+                desc: "Производительность системы не снижается даже при максимальной нагрузке"
+              },
+              {
+                icon: "BarChart",
+                title: "Подробная аналитика",
+                desc: "Мониторинг угроз в реальном времени с детальными отчетами"
+              }
+            ].map((feature, index) => (
+              <Card key={index} className="p-6 hover:shadow-lg transition-all hover:translate-y-[-5px] border-t-4 border-t-cyan-500">
+                <div className="flex flex-col items-center text-center">
+                  <div className="mb-4 p-3 bg-cyan-100 rounded-full">
+                    <Icon name={feature.icon} className="h-7 w-7 text-cyan-600" />
                   </div>
-                  <p className="text-gray-600">{item.desc}</p>
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.desc}</p>
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Контактный раздел */}
-      <section className="py-16 bg-violet-50">
+      {/* Секция с продуктами */}
+      <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="mb-10 text-center">
-            <h2 className="text-3xl font-bold mb-2">Связаться со мной</h2>
-            <p className="text-gray-600">Буду рад сотрудничеству и общению</p>
-            <Separator className="mt-4 mx-auto w-20 bg-violet-400" />
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Наши решения</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Полный спектр решений для вашей безопасности в цифровом пространстве
+            </p>
+            <Separator className="mt-8 mx-auto w-20 bg-cyan-500" />
           </div>
           
-          <div className="max-w-md mx-auto">
-            <Card className="p-6">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Icon name="Mail" className="h-5 w-5 text-violet-600" />
-                  <p>ivan.petrov@example.com</p>
+          <div className="grid md:grid-cols-2 gap-10">
+            {[
+              {
+                title: "SafeNet для бизнеса",
+                desc: "Корпоративная защита с учетом специфики вашей компании. Включает защиту серверов, рабочих станций и облачных сервисов.",
+                image: "https://images.unsplash.com/photo-1600267204091-5c1ab8b10c02?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                features: ["Защита от DDoS-атак", "Безопасность электронной почты", "Защита веб-приложений"]
+              },
+              {
+                title: "SafeNet для дома",
+                desc: "Надежная защита ваших устройств и личных данных. Интуитивный интерфейс и автоматическое обновление.",
+                image: "https://images.unsplash.com/photo-1593642532871-8b12e02d091c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+                features: ["Анти-фишинг", "Защита паролей", "Родительский контроль"]
+              }
+            ].map((product, index) => (
+              <Card key={index} className="overflow-hidden border-0 shadow-lg rounded-xl">
+                <div className="h-64 overflow-hidden">
+                  <img 
+                    src={product.image} 
+                    alt={product.title} 
+                    className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
-                <div className="flex items-center gap-3">
-                  <Icon name="Phone" className="h-5 w-5 text-violet-600" />
-                  <p>+7 (999) 123-45-67</p>
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold mb-2">{product.title}</h3>
+                  <p className="text-gray-600 mb-4">{product.desc}</p>
+                  <ul className="space-y-2 mb-6">
+                    {product.features.map((feature, i) => (
+                      <li key={i} className="flex items-center gap-2">
+                        <Icon name="CheckCircle" className="h-5 w-5 text-cyan-500" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Button className="w-full bg-cyan-600 hover:bg-cyan-700">Узнать больше</Button>
                 </div>
-                <div className="flex items-center gap-3">
-                  <Icon name="MapPin" className="h-5 w-5 text-violet-600" />
-                  <p>Санкт-Петербург, Россия</p>
-                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Секция доверия */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Нам доверяют</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Клиенты выбирают SafeNet для защиты своих данных
+            </p>
+            <Separator className="mt-8 mx-auto w-20 bg-cyan-500" />
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+            {[
+              "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=200&q=80",
+              "https://images.unsplash.com/photo-1614680376408-16afb0d5632a?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=200&q=80",
+              "https://images.unsplash.com/photo-1631700611307-37dbcb89ef7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=200&q=80",
+              "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=200&q=80"
+            ].map((logo, index) => (
+              <div key={index} className="p-4 grayscale hover:grayscale-0 transition-all">
+                <img src={logo} alt={`Клиент ${index + 1}`} className="h-16 object-contain" />
               </div>
-              
-              <div className="mt-6 flex justify-center gap-4">
-                <Button size="icon" variant="outline">
-                  <Icon name="Instagram" className="h-5 w-5" />
-                </Button>
-                <Button size="icon" variant="outline">
-                  <Icon name="Facebook" className="h-5 w-5" />
-                </Button>
-                <Button size="icon" variant="outline">
-                  <Icon name="Twitter" className="h-5 w-5" />
-                </Button>
-                <Button size="icon" variant="outline">
-                  <Icon name="Linkedin" className="h-5 w-5" />
-                </Button>
+            ))}
+          </div>
+          
+          <div className="mt-16 bg-gray-50 p-8 rounded-xl shadow-sm">
+            <div className="flex flex-col items-center text-center">
+              <Icon name="Quote" className="h-12 w-12 text-cyan-400 mb-6" />
+              <p className="text-xl md:text-2xl text-gray-600 italic mb-6 max-w-3xl">
+                "SafeNet изменил наш подход к безопасности. Мы наконец-то можем чувствовать себя защищенными от современных угроз."
+              </p>
+              <div>
+                <p className="font-semibold">Александр Иванов</p>
+                <p className="text-gray-500">Технический директор, ТехноКорп</p>
               </div>
-            </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Секция с призывом к действию */}
+      <section className="py-20 bg-gradient-to-r from-blue-900 to-cyan-800 text-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Готовы защитить свои данные?</h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Начните использовать SafeNet уже сегодня и получите бесплатный анализ текущих рисков
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50">
+                Запросить демо
+              </Button>
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
+                Связаться с экспертом
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Футер */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <p>© 2025 Иван Петров. Все права защищены.</p>
-          <div className="mt-2 text-gray-400 text-sm">
-            Сайт разработан с использованием современных технологий
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold mb-4">SafeNet</h3>
+              <p className="text-gray-400 mb-4">
+                Инновационные решения в сфере кибербезопасности. Защита данных — наша специализация.
+              </p>
+              <div className="flex gap-4">
+                <Button size="icon" variant="ghost" className="text-white hover:text-cyan-400 hover:bg-transparent">
+                  <Icon name="Facebook" className="h-5 w-5" />
+                </Button>
+                <Button size="icon" variant="ghost" className="text-white hover:text-cyan-400 hover:bg-transparent">
+                  <Icon name="Twitter" className="h-5 w-5" />
+                </Button>
+                <Button size="icon" variant="ghost" className="text-white hover:text-cyan-400 hover:bg-transparent">
+                  <Icon name="Linkedin" className="h-5 w-5" />
+                </Button>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="font-bold mb-4">Контакты</h4>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <Icon name="Mail" className="h-5 w-5 text-cyan-400" />
+                  <p>info@safenet-project.ru</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Icon name="Phone" className="h-5 w-5 text-cyan-400" />
+                  <p>+7 (800) 123-45-67</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Icon name="MapPin" className="h-5 w-5 text-cyan-400" />
+                  <p>Москва, ул. Технологическая, 42</p>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="font-bold mb-4">Решения</h4>
+              <ul className="space-y-2">
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Для бизнеса</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Для частных лиц</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Консалтинг</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Обучение</a></li>
+                <li><a href="#" className="hover:text-cyan-400 transition-colors">Поддержка</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <Separator className="my-8 bg-gray-700" />
+          
+          <div className="text-center text-gray-400">
+            <p>© 2025 SafeNet. Все права защищены.</p>
           </div>
         </div>
       </footer>
