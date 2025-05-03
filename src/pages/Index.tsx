@@ -250,6 +250,18 @@ const Index = () => {
           
           <div className="text-center text-gray-400">
             <p>© 2025 SafeNet. Все права защищены.</p>
+            <div className="mt-2 flex items-center justify-center gap-1 text-sm">
+              <span>Проект разработан</span>
+              <a 
+                href="https://github.com/userCBACTNK" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-cyan-400 hover:text-cyan-300 font-medium flex items-center gap-1 transition-colors"
+              >
+                <Icon name="Github" className="h-4 w-4" />
+                @userCBACTNK
+              </a>
+            </div>
           </div>
         </div>
       </footer>
